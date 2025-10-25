@@ -33,7 +33,6 @@ const Header = () => {
   const readAuth = () => {
     try {
       const raw = localStorage.getItem("auth");
-      console.log("🔍 Initial/Sync auth read - raw:", raw);
       if (!raw) return null;
       const parsed = JSON.parse(raw);
       const token =
@@ -43,7 +42,6 @@ const Header = () => {
         parsed?.data?.accessToken ??
         parsed?.user?.token ??
         null;
-      console.log("🔐 Normalized auth:", { hasToken: !!token });
       return token ? { ...parsed, token } : parsed;
     } catch (err) {
       console.error("❌ Error reading auth:", err);

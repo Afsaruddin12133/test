@@ -6,7 +6,7 @@ import Record from '../../Component/Record';
 import Problem from '../../Component/Problem';
 import Hero1 from '../../Component/Hero1';
 import Footer from '../../Component/Footer';
-import Navbar from '../../Component/Navbar';
+import Navbar from '../../components(A)/shared/navbar/Navbar';
 
 const Home = () => {
   const [active, setActive] = useState("live");
@@ -19,7 +19,8 @@ const Home = () => {
 
   return (
     <div>
-      <Header></Header>
+      {/* <Navbar /> */}
+      {/* <Header></Header> */}
       {/* <Navbar /> */}
       <Hero />
 
